@@ -49,6 +49,24 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
  nav[4].textContent = "About";
  nav[5].textContent = "Contact";
 
+ nav.forEach(element => {
+  element.style.color = 'green';
+})
+
+const newNav = document.querySelector("nav");
+
+const newNavOne = document.createElement("a");
+newNavOne.textContent = "Sign In";
+newNav.prepend(newNavOne);
+newNavOne.style.color = "green"
+
+const newNavTwo = document.createElement("a");
+newNavTwo.textContent = "Register";
+newNav.appendChild(newNavTwo);
+newNavTwo.style.color = "green"
+
+
+
 const header = document.querySelector('h1').innerHTML = "DOM <br /> Is <br /> Awesome"
 const button = document.querySelector('button').textContent = "Get Started"
 let image = document.getElementById("cta-img");
